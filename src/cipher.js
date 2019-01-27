@@ -27,7 +27,7 @@ function encode(offset, str){
     for(let i = 0; i < str.length; i++){
         const code = str.charCodeAt([i]);
         //const newCode = ((code - 32) + offset) % 95 + 32;
-        const newCode = mod((code - 32) + offset, 95) + 32;
+        const newCode = mod((code - 32) + offset, 224) + 32;
         const newLetter = String.fromCharCode(newCode);
         encrypted += newLetter;
     }
@@ -39,7 +39,7 @@ function decode(offset, str){
     for(let i = 0; i < str.length; i++){
         let code = str.charCodeAt([i]);
         //let newCode = ((code - 32) - offset) % 95 + 32;
-        const newCode = mod((code - 32) - offset, 95) + 32;
+        const newCode = mod((code - 32) - offset, 224) + 32;
         let newLetter = String.fromCharCode(newCode);
         decrypted += newLetter;
     }
