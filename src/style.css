@@ -1,0 +1,141 @@
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+body{
+    background-color: #000000;
+}
+
+textarea {
+    display: block;
+    background-color: black;
+    border-color: #24ef00;
+    font-family: Consolas,monaco,monospace;
+    border-top: none;
+    color: #188f00;
+    width: 500px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+::placeholder{
+    color:#188f00;
+} 
+
+span{
+    font-family:Merriweather;
+    text-transform: capitalize;
+    font-size: 10px;
+    margin: 5px;    
+}
+
+button{
+    text-transform: uppercase;
+    margin:5px;
+    padding: 5px 25px;
+}
+
+.box{
+    display: inline-block;
+    text-align: left;
+    border-style: solid;
+    border-color: #24ef00;
+    background-color: #24ef00;
+    margin-left: auto;
+    margin-right: auto;
+    width: 502px;
+}
+
+.icon{
+    width: 15px;
+    float: right;
+}
+
+#btn-cipher{
+    background-color: #000000;
+    border: solid #188f00;
+    font-family: VT323;
+    font-weight: bold;
+    font-size: 18px;
+    color: #188f00;
+    text-transform: uppercase; 
+    float: left;
+    margin-left: 15px;
+}
+
+#btn-decipher{
+    background-color: #188f00;
+    border: solid #188f00;
+    color: #000000;
+    font-family: VT323;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase; 
+    float: right;
+    margin-right: 15px;
+}
+
+#btn-cipher:hover{
+    cursor: pointer;
+    border: solid #24ef00;
+    color: #24ef00;
+}
+
+#btn-decipher:hover{
+    cursor: pointer;
+    background-color: #24ef00;
+    border: solid #24ef00;
+}
+
+#box-key{
+    display: inline-block;
+    text-align: left;
+    border-style: solid;
+    border-color: #24ef00;
+    background-color: #24ef00;
+    margin-left: auto;
+    margin-right: auto;
+    width: 206px;
+}
+
+#offset{
+    width: 204px;
+}
+
+.item-1 { grid-area: image-1;   }
+.item-2 { grid-area: cipher;    }
+.item-3 { grid-area: key;       }
+.item-4 { grid-area: image-2;   }
+.item-5 { grid-area: decipher;  }
+.item-6 { grid-area: image-3;   }
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        'image-1 image-1 cipher cipher key key'
+        'image-2 image-2 cipher cipher image-3 image-3'
+        'image-2 image-2 decipher decipher image-3 image-3'
+        'image-2 image-2 decipher decipher image-3 image-3';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+#item-3{
+    padding-top: 50px;
+}
+
+#image-2{
+    margin-top: 50px;
+}
+
+.image-display{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
