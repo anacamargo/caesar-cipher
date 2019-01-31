@@ -2,9 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
-body{
-    background-color: #000000;
-}
+body{ background-color: #000000;}
 
 textarea {
     display: block;
@@ -14,13 +12,9 @@ textarea {
     border-top: none;
     color: #188f00;
     width: 500px;
-    margin-left:auto;
-    margin-right: auto;
 }
 
-::placeholder{
-    color:#188f00;
-} 
+::placeholder{ color:#188f00;} 
 
 span{
     font-family:Merriweather;
@@ -31,9 +25,10 @@ span{
 
 button{
     text-transform: uppercase;
-    margin:5px;
+    margin:5px 0;
     padding: 5px 25px;
 }
+.icon{ width: 15px; float: right;}
 
 .box{
     display: inline-block;
@@ -46,11 +41,6 @@ button{
     width: 502px;
 }
 
-.icon{
-    width: 15px;
-    float: right;
-}
-
 #btn-cipher{
     background-color: #000000;
     border: solid #188f00;
@@ -60,7 +50,6 @@ button{
     color: #188f00;
     text-transform: uppercase; 
     float: left;
-    margin-left: 15px;
 }
 
 #btn-decipher{
@@ -72,7 +61,7 @@ button{
     font-size: 18px;
     text-transform: uppercase; 
     float: right;
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 #btn-cipher:hover{
@@ -98,15 +87,13 @@ button{
     width: 206px;
 }
 
-#offset{
-    width: 204px;
-}
+#offset{ width: 204px; }
 
 .item-1 { grid-area: image-1;   }
 .item-2 { grid-area: cipher;    }
-.item-3 { grid-area: key;       }
-.item-4 { grid-area: image-2;   }
-.item-5 { grid-area: decipher;  }
+.item-3 { grid-area: key;       padding-top: 10%;  }
+.item-4 { grid-area: image-2;   padding-top: 10%;  }
+.item-5 { grid-area: decipher;  padding-top: 5%;   }
 .item-6 { grid-area: image-3;   }
 
 .grid-container{
@@ -120,22 +107,10 @@ button{
     padding: 10px;
 }
 
-.grid-container > div {
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
-}
-
-#item-3{
-    padding-top: 50px;
-}
-
-#image-2{
-    margin-top: 50px;
-}
 
 .image-display{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
