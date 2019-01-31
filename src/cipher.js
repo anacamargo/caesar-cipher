@@ -22,17 +22,26 @@ function decipherClick() {
         return message = document.getElementById("offset").value = "Por favor digite um número";
     }
     const str = document.getElementById("decipher").value;
+    document.getElementById("decipher").value = "";
     const result = decode(offset, str);
     document.getElementById("cipher").value = result;
 }
 
 function encode(offset, str) {
     let encrypted = "";
+    let newCode;
+    let newLetter;
+
     for (let i = 0; i < str.length; i++) {
         const code = str.charCodeAt([i]);
-        //const newCode = ((code - 32) + offset) % 95 + 32;
-        const newCode = mod((code - 32) + offset, 224) + 32;
-        const newLetter = String.fromCharCode(newCode);
+        console.log(code);
+        if (code >= 65 && code <= 90) {
+            newCode = mod((code - 65) + offset, 25) + 65;
+            newLetter = String.fromCharCode(newCode);
+        } else if (code >= 97 && code <= 122) {
+            newCode = mod((code - 97) + offset, 25) + 97;
+            newLetter = String.fromCharCode(newCode);
+        } else newLetter = String.fromCharCode(code);
         encrypted += newLetter;
     }
     return encrypted;
@@ -40,12 +49,20 @@ function encode(offset, str) {
 
 function decode(offset, str) {
     let decrypted = "";
+    let newCode;
+    let newLetter;
+
     for (let i = 0; i < str.length; i++) {
-        let code = str.charCodeAt([i]);
-        const newCode = mod((code - 32) - offset, 224) + 32;
-        let newLetter = String.fromCharCode(newCode);
+        const code = str.charCodeAt([i]);
+        console.log(code);
+        if (code >= 65 && code <= 90) {
+            newCode = mod((code - 65) - offset, 25) + 65;
+            newLetter = String.fromCharCode(newCode);
+        } else if (code >= 97 && code <= 122) {
+            newCode = mod((code - 97) - offset, 25) + 97;
+            newLetter = String.fromCharCode(newCode);
+        } else newLetter = String.fromCharCode(code);
         decrypted += newLetter;
     }
-
     return decrypted;
 }
