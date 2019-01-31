@@ -1,6 +1,5 @@
 // O módulo no javaScriptv funciona como o resto da divisão e não como módulo.
 // https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers
-
 function mod(n, m) {
     return ((n % m) + m) % m;
 }
@@ -34,12 +33,11 @@ function encode(offset, str) {
 
     for (let i = 0; i < str.length; i++) {
         const code = str.charCodeAt([i]);
-        console.log(code);
         if (code >= 65 && code <= 90) {
-            newCode = mod((code - 65) + offset, 25) + 65;
+            newCode = mod((code - 65) + offset, 26) + 65;
             newLetter = String.fromCharCode(newCode);
         } else if (code >= 97 && code <= 122) {
-            newCode = mod((code - 97) + offset, 25) + 97;
+            newCode = mod((code - 97) + offset, 26) + 97;
             newLetter = String.fromCharCode(newCode);
         } else newLetter = String.fromCharCode(code);
         encrypted += newLetter;
@@ -54,12 +52,11 @@ function decode(offset, str) {
 
     for (let i = 0; i < str.length; i++) {
         const code = str.charCodeAt([i]);
-        console.log(code);
         if (code >= 65 && code <= 90) {
-            newCode = mod((code - 65) - offset, 25) + 65;
+            newCode = mod((code - 65) - offset, 26) + 65;
             newLetter = String.fromCharCode(newCode);
         } else if (code >= 97 && code <= 122) {
-            newCode = mod((code - 97) - offset, 25) + 97;
+            newCode = mod((code - 97) - offset, 26) + 97;
             newLetter = String.fromCharCode(newCode);
         } else newLetter = String.fromCharCode(code);
         decrypted += newLetter;
