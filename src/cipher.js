@@ -1,5 +1,6 @@
 // O módulo no javaScriptv funciona como o resto da divisão e não como módulo.
 // https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers
+
 function mod(n, m) {
     return ((n % m) + m) % m;
 }
@@ -7,7 +8,9 @@ function mod(n, m) {
 function cipherClick() {
     const offset = parseInt(document.getElementById("offset").value);
     if (isNaN(offset)) {
-        return message = document.getElementById("offset").value = "Por favor digite um número";
+        document.getElementById("offset").value= "";
+        document.getElementById("offset").placeholder= "Por favor digite um número";
+        return false;
     }
     const str = document.getElementById("cipher").value;
     document.getElementById("cipher").value = "";
@@ -18,7 +21,7 @@ function cipherClick() {
 function decipherClick() {
     const offset = parseInt(document.getElementById("offset").value);
     if (isNaN(offset)) {
-        return message = document.getElementById("offset").value = "Por favor digite um número";
+        return message = document.getElementById("offset").placeholder= "Por favor digite um número";
     }
     const str = document.getElementById("decipher").value;
     document.getElementById("decipher").value = "";
