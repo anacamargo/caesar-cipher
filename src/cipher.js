@@ -8,8 +8,9 @@ function mod(n, m) {
 function cipherClick() {
     const offset = parseInt(document.getElementById("offset").value);
     if (isNaN(offset)) {
-        document.getElementById("offset").value= "";
-        document.getElementById("offset").placeholder= "Por favor digite um número";
+        document.getElementById("offset").value = "";
+        document.getElementById("offset").placeholder = "Por favor digite um número";
+        document.getElementById("offset").focus();
         return false;
     }
     const str = document.getElementById("cipher").value;
@@ -21,7 +22,10 @@ function cipherClick() {
 function decipherClick() {
     const offset = parseInt(document.getElementById("offset").value);
     if (isNaN(offset)) {
-        return message = document.getElementById("offset").placeholder= "Por favor digite um número";
+        document.getElementById("offset").value = "";
+        document.getElementById("offset").placeholder = "Por favor digite um número";
+        document.getElementById("offset").focus();
+        return false;
     }
     const str = document.getElementById("decipher").value;
     document.getElementById("decipher").value = "";
