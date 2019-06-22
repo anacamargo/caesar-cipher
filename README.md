@@ -1,11 +1,13 @@
 # Caesar-Cipher - Cifra de César
 
 ## Objetivo do projeto
-Este é o primeiro projeto proposto pela Laboratória durante o bootcamp de 2019.
+Projeto proposto pela Laboratória durante o bootcamp de 2019.
 
 O objetivo do projeto é criar uma aplicação web usando os conhecimentos de User Experience Design e vanilla JavaScript, não sendo permitido o uso de nem uma biblioteca ou framework.
 
-O programa deve criptografar e descriptografar mensagens usando a Cifra de César, um tipo de cifra por substituição, em que uma letra no texto original é substituída por outra, seguindo um número fixo para essa substituição.
+O programa deve criptografar e descriptografar mensagens usando a Cifra de César, um tipo de cifra por substituição, em que uma letra no texto original é substituída por outra, seguindo um número fixo para essa substituição. 
+
+Para visualizar o resultado clique [aqui](https://anacamargo.github.io/caesar-cipher/).
 
 
 ## Processo de desenvolvimento
@@ -34,13 +36,11 @@ Para enviar sua informações com segurança para Moscou o jornalista/agente uti
 Os russos, por sua vez, usam como chave datas importantes,hoje por exemplo quando a matéria do MEC saiu a chave foi a data de inicio da Revolução Russa.
 
 ## Funcionalidades
-*  Elege uma chave (numeros positivos e negativos) indicando quantas posições de deslocamento queremos utilizar
-*  Insere uma mensagem (letras maiúsculas e minúsculas) que queremos cifrar ou decifrar
-*  Exibe o resultado da mensagem cifrada ou decifrada
-*  Caracteres especias (como espaços, pontuação, acentos, etc.) também são exibidos na tela criptografados
+*  Elege uma chave (numeros positivos e negativos) indicando quantas posições de deslocamento queremos utilizar.
+*  Insere uma mensagem (letras maiúsculas e minúsculas) que queremos cifrar ou decifrar.
+*  Exibe o resultado da mensagem cifrada ou decifrada.
+*  Caracteres especias (como espaços, pontuação, acentos, etc.) também são exibidos na tela criptografados.
 
-## Link para acesso
-[Caesar-cipher](https://anacamargo.github.io/caesar-cipher/)
 
 
 
