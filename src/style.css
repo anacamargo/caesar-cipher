@@ -12,11 +12,11 @@ textarea {
     border-color: #24ef00;
     font-family: Consolas,monaco,monospace;
     border-top: none;
-    color: #188f00;
-    width: 498px;
+    color: #24ef00;
+    width: 99%;
 }
 
-::placeholder{ color:#188f00;} 
+::placeholder{ color:#24ef00;} 
 
 span{
     font-family:Merriweather;
@@ -40,7 +40,7 @@ button{
     background-color: #24ef00;
     margin-left: auto;
     margin-right: auto;
-    width: 502px;
+    width: 100%;
 }
 
 .btn-cipher{
