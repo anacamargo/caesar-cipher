@@ -1,72 +1,43 @@
-// O módulo no javaScriptv funciona como o resto da divisão e não como módulo.
-// https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers
+document.querySelector('#btn-cipher').addEventListener('click', () => buttonSelect('cipher'));
+document.querySelector('#btn-decipher').addEventListener('click', () => buttonSelect('decipher'));
+
+function hasOffset() {
+  const offset = parseInt(document.getElementById('offset').value);
+  if (isNaN(offset)) {
+    document.getElementById('offset').value = '';
+    document.getElementById('offset').placeholder = 'Por favor digite um número';
+    document.getElementById('offset').focus();
+    return false;
+  }
+  return offset;
+}
+
+function buttonSelect(btnClicked) {
+  const offset = hasOffset();
+  const str = document.getElementById(btnClicked).value;
+  document.getElementById(btnClicked).value = '';
+
+  if (btnClicked === 'cipher') {
+    const result = encode(offset, str);
+    document.getElementById('decipher').value = result;
+  } else {
+    const result = encode(-offset, str);
+    document.getElementById('cipher').value = result;
+  }
+}
 
 function mod(n, m) {
-    return ((n % m) + m) % m;
-}
-
-function cipherClick() {
-    const offset = parseInt(document.getElementById("offset").value);
-    if (isNaN(offset)) {
-        document.getElementById("offset").value = "";
-        document.getElementById("offset").placeholder = "Por favor digite um número";
-        document.getElementById("offset").focus();
-        return false;
-    }
-    const str = document.getElementById("cipher").value;
-    document.getElementById("cipher").value = "";
-    const result = encode(offset, str);
-    document.getElementById("decipher").value = result;
-}
-
-function decipherClick() {
-    const offset = parseInt(document.getElementById("offset").value);
-    if (isNaN(offset)) {
-        document.getElementById("offset").value = "";
-        document.getElementById("offset").placeholder = "Por favor digite um número";
-        document.getElementById("offset").focus();
-        return false;
-    }
-    const str = document.getElementById("decipher").value;
-    document.getElementById("decipher").value = "";
-    const result = decode(offset, str);
-    document.getElementById("cipher").value = result;
+  return ((n % m) + m) % m;
 }
 
 function encode(offset, str) {
-    let encrypted = "";
-    let newCode;
-    let newLetter;
+  let encrypted = '';
 
-    for (let i = 0; i < str.length; i++) {
-        const code = str.charCodeAt([i]);
-        if (code >= 65 && code <= 90) {
-            newCode = mod((code - 65) + offset, 26) + 65;
-            newLetter = String.fromCharCode(newCode);
-        } else if (code >= 97 && code <= 122) {
-            newCode = mod((code - 97) + offset, 26) + 97;
-            newLetter = String.fromCharCode(newCode);
-        } else newLetter = String.fromCharCode(code);
-        encrypted += newLetter;
-    }
-    return encrypted;
-}
-
-function decode(offset, str) {
-    let decrypted = "";
-    let newCode;
-    let newLetter;
-
-    for (let i = 0; i < str.length; i++) {
-        const code = str.charCodeAt([i]);
-        if (code >= 65 && code <= 90) {
-            newCode = mod((code - 65) - offset, 26) + 65;
-            newLetter = String.fromCharCode(newCode);
-        } else if (code >= 97 && code <= 122) {
-            newCode = mod((code - 97) - offset, 26) + 97;
-            newLetter = String.fromCharCode(newCode);
-        } else newLetter = String.fromCharCode(code);
-        decrypted += newLetter;
-    }
-    return decrypted;
+  for (let indice = 0; indice < str.length; indice++) {
+    const code = str.charCodeAt([indice]);
+    const newCode = mod((code - 32) + offset, 224) + 32;
+    const newLetter = String.fromCharCode(newCode);
+    encrypted += newLetter;
+  }
+  return encrypted;
 }

@@ -2,7 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(https://fonts.googleapis.com/css?family=VT323);
 
-body{ background-color: #000000;}
+body{ 
+    background-color: #000000;
+}
 
 textarea {
     display: block;
@@ -11,7 +13,7 @@ textarea {
     font-family: Consolas,monaco,monospace;
     border-top: none;
     color: #188f00;
-    width: 500px;
+    width: 498px;
 }
 
 ::placeholder{ color:#188f00;} 
@@ -41,18 +43,18 @@ button{
     width: 502px;
 }
 
-#btn-cipher{
+.btn-cipher{
     background-color: #000000;
     border: solid #188f00;
     font-family: VT323;
     font-weight: bold;
     font-size: 18px;
     color: #188f00;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     float: left;
 }
 
-#btn-decipher{
+.btn-decipher{
     background-color: #188f00;
     border: solid #188f00;
     color: #000000;
@@ -61,16 +63,15 @@ button{
     font-size: 18px;
     text-transform: uppercase; 
     float: right;
-    margin-right: 30px;
 }
 
-#btn-cipher:hover{
+.btn-cipher:hover{
     cursor: pointer;
     border: solid #24ef00;
     color: #24ef00;
 }
 
-#btn-decipher:hover{
+.btn-decipher:hover{
     cursor: pointer;
     background-color: #24ef00;
     border: solid #24ef00;
@@ -87,17 +88,18 @@ button{
     width: 206px;
 }
 
-#offset{ width: 204px; }
+#offset{ width: 202px; }
 
 .item-1 { grid-area: image-1;   }
-.item-2 { grid-area: cipher;    }
-.item-3 { grid-area: key;       padding-top: 10%;  }
+.item-2 { grid-area: cipher;    text-align: center;}
+.item-3 { grid-area: key;       padding-top: 10%;   text-align: center;}
 .item-4 { grid-area: image-2;   padding-top: 10%;  }
-.item-5 { grid-area: decipher;  padding-top: 5%;   }
-.item-6 { grid-area: image-3;   }
+.item-5 { grid-area: decipher;  padding-top: 5%;   text-align: center;}
+.item-6 { grid-area: image-3;   text-align: left; }
 
 .grid-container{
     display: grid;
+    justify-content: space-between;
     grid-template-areas: 
         'image-1 image-1 cipher cipher key key'
         'image-2 image-2 cipher cipher image-3 image-3'
@@ -107,10 +109,8 @@ button{
     padding: 10px;
 }
 
-
 .image-display{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-

@@ -1,0 +1,23 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "O objetivo do programa é criptografar e descriptografar mensagens  usando a Cifra de César, um tipo de cifra por substituição, em que uma letra no texto original é substituída por outra, seguindo um número fixo para essa substituição.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/eslint/bin/eslint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacamargo/caesar-cipher.git"
+  },
+  "author": "Ana Cláudia Camargo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacamargo/caesar-cipher/issues"
+  },
+  "homepage": "https://github.com/anacamargo/caesar-cipher#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}

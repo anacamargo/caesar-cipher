@@ -15,7 +15,7 @@ function testEncodeLetterAlphabet() {
 function testDecodeLetterAlphabet() {
    const key = 2;
    const str = "CDEFGHIJKLMNOPQRSTUVWXYZABcdefghijklmnopqrstuvwxyzab";
-   const strDecode = decode(key, str);
+   const strDecode = encode(-key, str);
    const alphabetDecode = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
    let result = [];
    for (i = 0; i < alphabetDecode.length; i++) {
@@ -33,15 +33,11 @@ function testOffset() {
 
    for (i = 0; i < keys.length; i++) {
       let strEncode = encode(parseInt(keys[i]), str);
-      let strDecode = decode(parseInt(keys[i]), strEncode);
+      let strDecode = encode(parseInt(-keys[i]), strEncode);
       if (str === strDecode) {
          result.push({plain : str, encoded:strEncode, decoded :strDecode, key : keys[i], status : "OK" });
       } else result.push({plain : str, encoded:strEncode, decoded :strDecode, key : keys[i], status : "FAILED" });
    }
    return result;
 }
-
-console.log(testEncodeLetterAlphabet());
-console.log(testDecodeLetterAlphabet());
-console.log(testOffset());
 
