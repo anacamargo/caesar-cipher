@@ -1,11 +1,10 @@
 {
   "name": "caesar-cipher",
   "version": "1.0.0",
-  "description": "O objetivo do programa é criptografar e descriptografar mensagens  usando a Cifra de César, um tipo de cifra por substituição, em que uma letra no texto original é substituída por outra, seguindo um número fixo para essa substituição.",
-  "main": "index.js",
+  "description": "Criptografa e descriptografa mensagens usando a Cifra de César",
+  "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/eslint/bin/eslint.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,8 +16,8 @@
     "url": "https://github.com/anacamargo/caesar-cipher/issues"
   },
   "homepage": "https://github.com/anacamargo/caesar-cipher#readme",
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^5.16.0"
-  },
-  "dependencies": {}
+    "eslint": "^6.0.1"
+  }
 }
