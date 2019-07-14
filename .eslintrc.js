@@ -31,7 +31,7 @@ module.exports = {
     ],
     'id-length': [
       'error',
-      { 'exceptions': ['x'] }
+      { 'exceptions': ['n', 'm'] }
     ],
     'camelcase': 2,
     'keyword-spacing': 2,

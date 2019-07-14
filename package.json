@@ -19,5 +19,6 @@
   "homepage": "https://github.com/anacamargo/caesar-cipher#readme",
   "devDependencies": {
     "eslint": "^5.16.0"
-  }
+  },
+  "dependencies": {}
 }
